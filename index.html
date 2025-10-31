@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisata Aceh Utara</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url('img/bg.png') center/cover no-repeat fixed;
+            min-height: 100vh;
+            padding: 40px 20px;
+            line-height: 1.8;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+            animation: fadeIn 0.6s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .header {
+            background: #2A0001;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+        }
+        h1 {
+            color: white;
+            font-size: 42px;
+            font-weight: 700;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            margin-bottom: 10px;
+        }
+        .image-container {
+            position: relative;
+            overflow: hidden;
+        }
+        .spot-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        .image-container:hover .spot-image {
+            transform: scale(1.05);
+        }
+        .content {
+            padding: 50px;
+        }
+        .description {
+            margin-bottom: 30px;
+        }
+        .description p {
+            color: #555;
+            font-size: 18px;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        .back-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .route-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 32px;
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
+            margin-top: 20px;
+        }
+        .route-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(40, 167, 69, 0.6);
+        }
+        .route-button::before {
+            content: "🗺️";
+            font-size: 22px;
+        }
+        
+        /* Responsive Design untuk Mobile */
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 20px 10px;
+            }
+            .container {
+                border-radius: 16px;
+            }
+            h1 {
+                font-size: 32px;
+            }
+            .content {
+                padding: 30px 25px;
+            }
+            .description p {
+                font-size: 16px;
+            }
+            .spot-image {
+                height: 350px;
+            }
+            .route-button {
+                padding: 14px 24px;
+                font-size: 16px;
+            }
+            .back-link {
+                padding: 12px 24px;
+                font-size: 15px;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            body {
+                padding: 15px 10px;
+            }
+            h1 {
+                font-size: 24px;
+                padding: 30px 20px;
+            }
+            .content {
+                padding: 25px 20px;
+            }
+            .description p {
+                font-size: 15px;
+                margin-bottom: 15px;
+            }
+            .spot-image {
+                height: 250px;
+            }
+            .route-button {
+                padding: 12px 20px;
+                font-size: 15px;
+                width: 100%;
+                justify-content: center;
+            }
+            .route-button::before {
+                font-size: 20px;
+            }
+            .back-link {
+                padding: 10px 20px;
+                font-size: 14px;
+                width: 100%;
+                justify-content: center;
+            }
+            .button-container {
+                margin-top: 30px;
+            }
+
+            /* Mobile: show full image without cropping */
+            .image-container { overflow: visible; }
+            .spot-image {
+                height: auto;
+                width: 100%;
+                max-height: 80vh;
+                object-fit: contain;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+    
+</div>
+
+<div class="image-container">
+    <img src="img/satuu.jpg" alt="makam malikussaleh" class="spot-image">
+</div>
+
+<div class="content">
+    <div class="history">
+        <h2>KOMPLEK MAKAM MALIKUSSALEH</h2>
+        <p>Kompleks Makam Sultan Malikussaleh terletak di Desa Beuringen, 
+            Kecamatan Samudera, Kabupaten Aceh Utara, Provinsi Aceh. Situs ini 
+            merupakan salah satu peninggalan penting dari Kerajaan Samudera Pasai, 
+            kerajaan Islam pertama di Nusantara yang berdiri pada abad ke-13. Di kompleks 
+            ini dimakamkan Sultan Malikussaleh, pendiri dan raja pertama Samudera Pasai yang
+            memerintah sekitar tahun 1267–1297 M. Beliau dikenal sebagai raja yang adil, 
+            bijaksana, serta tokoh utama dalam penyebaran Islam di wilayah pesisir utara Aceh.</p>
+       <br>
+       <p>Selain Makam Sultan Malikussaleh, di kompleks ini juga terdapat makam keluarga kerajaan 
+        dan keturunannya, yaitu Sultan Muhammad Malik Az-Zahir, yang merupakan penerus tahta 
+        Samudera Pasai. Kompleks Makam ini memiliki ciri khas arsitektur batu nisan Aceh  dengan 
+        dekorasi kaligrafi Arab dan ukiran yang indah.</p>
+    </div>
+</div>
+
+
+<div class="image-container">
+    <img src="img/2.2.jpg" alt="makam malikussaleh" class="spot-image">
+</div>
+<div class="content">
+    <div class="history">
+        <h2>Kesultanan Samudra Pasai</h2>
+        <h4>Periode I</h4>
+        <h3>AL–MALIK ASH–SHALIH</h3>
+        <p>LEGENDA menyebutkan tentang Meurah Silu yang setelah memeluk Islam berubah nama menjadi MalikusSaleh. Meski legenda tersebut popular di kalangan masyarakat, namun sesungguhnya tidak memperkenalkan sosok Sultan Al–Malik Ash–Shalih dengan baik.</p>
+       <br>
+       <p>Lewat inskripsi pada nisan makam Sultan Al–Malik Ash–Shalih, ahli sejarah dari zaman Samudra Pasai mencatat bahwa Sultan adalah seorang yang bertaqwa lagi pemberi nasehat, berasal dari keturunan terhormat serta terkenal. Ia juga seorang yang pemurah, ahli ibadah dan penakluk (pembebas).</p>
+         <br>
+         <p>Catatan autentik yang singkat padat itu mengungkapkan dengan jelas bahwa Sultan memiliki kepribadian yang berimbang; seorang yang baik sekaligus menginginkan kebaikan untuk orang lain.
+            Begitulah seorang penguasa yang agung dan berpengaruh, dan adalah berkat jasa-jasa para penguasa semisalnya, Islam dapat menyebar dan menerangi kawasan yang luas di Asia Tenggara.
+            Selain itu, Al–Malik Ash–Shalih adalah juga pendiri dinasti yang meletakkan da’wah dan pe- nyiaran Islam sebagai tugas utama di atas pun- daknya.
+            Kekuasaan dinasti Islam ini berlanjut sampai dengan dua abad lebih, dan berakhir pada dekade kedua abad ke-16 M dengan wafatnya Sultan Zainal ‘Abidin bin Mahmud pada 923 H/1518 M. </p>
+            <br>
+        <p>هــذا القبر المرحوم المغفور الفقير الفاتح المنيب السلطان الملك الصالح
+الرحيم الكريم الكبير الملك الفاتح           
+انتقل السلطان الملك الصالح الذي في شهر رمضان سنة ست و تسعين و ست مائةمن هجرة النبي صلى الله عليه و سلم
+و جعل الله الجنة مثواه</p>
+<br>
+<p>TERJEMAH: Inilah kubur orang yang dirahmati lagi diampuni, yang bertaqwa lagi pemberi nasehat, yang berasal dari keturunan terhormat dan terkenal lagi pemurah, yang ahli ibadah dan pembebas, yang digelar dengan Sultan Malik Ash–Shalih, yang meninggal dunia pada bulan Ramadhan tahun 696 sejak perpindahan (hijrah) Nabi [saw.]. Semoga Allah melimpahkan rahmat ke atas pusaranya dan menjadikan syurga sebagai tempat kembalinya.</p>
+        </div>
+</div>
+
+
+<div class="image-container">
+    <img src="img/2.1.jpg" alt="makam malikussaleh" class="spot-image">
+</div>
+
+
+<div class="content">
+    <div class="history">
+        <h2>AL–MALIK AZH–ZHAHIR</h2>
+        <p>Ia bernama Muhammad dan digelar dengan Al–Malik Azh–Zhahir (raja yang menang).
+Pada nisan makam Al–Malik Azh–Zhahir sebelah kepala (utara) terdapat ukiran kaligrafi ayat Al–Qur’an, surah At–Taubah: 21–22. Ayat ini menerangkan tentang rahmat, keridhaan, syurga serta kesenangan yang kekal bagi orang-orang yang beriman, berhijrah dan berjihad di jalan Allah dengan jiwa dan harta.</p>
+       <br>
+       <p>Terukirnya ayat tersebut pada nisan Sultan Al–Malik Azh–Zhahir Muhammad bin Al–Malik Ash–Shalih (W. 726 H/1326 M) merupakan suatu pengungkapan bahwa sultan yang juga bergelar dengan “Syamsuddunya waddin” (matahari dunia dan agama) ini adalah seorang yang telah berperan besar dalam menyebarkan Islam sebagaimana ayahnya, Sultan Al–Malik Ash–Shalih.
+Ia dan ayahnya adalah peletak fondasi yang kokuh bagi Kerajaan Islam Samudra Pasai (Syammuthrah/Sumatera). Masa pemerintahan keduanya merupakan periode terpenting dalam sejarah Islam di Asia Tenggara.
+INSKRIPSI</p>
+<br>
+<p>بسم الله الرحمن الرحيم يشرهم
+ربهم برحمة منه و رضوان و جنات
+لهم فيها نعيم مقيم خالدين فيها ابدا ان الله عنده اجر عظيم صدق الله
+العظيم اللهم صل على محمد و اله</p>
+<br>
+<p>TERJEMAH:
+Dengan nama Allah Yang Maha Pengasih lagi Maha Penyayang. Tuhan mereka menggembirakan mereka dengan memberikan rahmat daripada–Nya, keridhaan dan syurga, mereka memperoleh di dalamnya kesenangan yang kekal. Sesungguhnya di sisi Allah pahala yang besar. Maha benar Allah Yang Maha Agung. (At–Taubah: 21–22) Ya Allah limpahkan shalawat ke atas Muhammad dan keluarganya.</p>
+    </div>
+</div>
+
+
+            <div class="button-container">
+                <a href="https://maps.app.goo.gl/yBGDukeY2s7AJoBf9" target="_blank" class="route-button">Lihat Rute di Google Maps</a>
+                <br><br>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
